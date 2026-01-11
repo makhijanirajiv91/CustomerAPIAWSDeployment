@@ -24,13 +24,13 @@ jobs:
       - name: Authenticate to Google Cloud
         uses: google-github-actions/auth@v2
         with:
-          workload_identity_provider: ${{ secrets.WORKLOAD_IDENTITY_PROVIDER }}
-          service_account: ${{ secrets.GCP_SERVICE_ACCOUNT }}
+          workload_identity_provider: projects/github-gcp-demo/locations/global/workloadIdentityPools/github-gcp-wi-pool/providers/github-gcp-provider
+          service_account: github-gcp-service-account@github-gcp-demo.iam.gserviceaccount.com
 
       - name: Setup gcloud
         uses: google-github-actions/setup-gcloud@v2
         with:
-          project_id: ${{ secrets.GCP_PROJECT_ID }}
+          project_id: github-gcp-demo
 
       - name: Configure Docker
         run: |
