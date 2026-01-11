@@ -11,6 +11,9 @@ permissions:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    permissions:
+      contents: 'read'
+      id-token: 'write' # Required for Workload Identity Federation
 
     steps:
       - uses: actions/checkout@v4
