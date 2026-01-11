@@ -34,7 +34,7 @@ jobs:
         uses: google-github-actions/setup-gcloud@v2
 
       - name: Configure Docker
-        run: gcloud auth configure-docker ${{ secrets.GCP_ARTIFACT_REGISTRY_LOCATION }}-docker.pkg.dev --quiet
+        run: gcloud auth configure-docker ${{ secrets.GCP_REGION }}-docker.pkg.dev
         
       - name: Build Docker image
         run: |
