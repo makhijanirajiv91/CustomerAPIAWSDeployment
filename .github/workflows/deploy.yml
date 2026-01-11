@@ -1,4 +1,5 @@
 name: Deploy Spring Boot to Cloud Run
+
 on:
   push:
     branches: [ "master" ]
