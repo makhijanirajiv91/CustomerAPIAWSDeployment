@@ -1,4 +1,4 @@
-name: Deploy Spring Boot to Cloud Run
+ name: Deploy Spring Boot to Cloud Run
 
 on:
   push:
