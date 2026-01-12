@@ -43,7 +43,7 @@ jobs:
       - name: Push Docker image
         run: |
           docker push \
-            ${{ secrets.GCP_ARTIFACT_REGISTRY_LOCATION }}-docker.pkg.dev/${{ secrets.GCP_PROJECT_ID }}/${{ secrets.GCP_ARTIFACT_REGISTRY_REPO }}/product-service:${{ github.sha }}
+            ${{ secrets.GCP_REGION }}-docker.pkg.dev/${{ secrets.GCP_PROJECT_ID }}/${{ secrets.GCP_REPOSITORY }}/product-service:${{ github.sha }}
 
 
       - name: Deploy to Cloud Run
